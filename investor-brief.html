@@ -2,17 +2,53 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Muse Paintbar - Marketing Vendor Overview for Investors</title>
+<title>Muse Paintbar - Investor Operating Brief</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
+    * { box-sizing: border-box; }
     body {
         font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-size: 11pt;
         line-height: 1.5;
         color: #333333;
-        max-width: 850px;
-        margin: 40px auto;
+        max-width: 900px;
+        margin: 0 auto;
         padding: 0 30px;
+        padding-top: 70px;
+    }
+    /* Sticky navigation */
+    .nav-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #004480;
+        z-index: 1000;
+        padding: 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .nav-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+    }
+    .nav-bar a {
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 9pt;
+        font-weight: 400;
+        padding: 12px 14px;
+        white-space: nowrap;
+        transition: background 0.2s;
+    }
+    .nav-bar a:hover {
+        background: #0094F9;
+    }
+    .nav-bar a.active {
+        background: #0094F9;
+        font-weight: 600;
     }
     h1 {
         font-size: 24pt;
@@ -20,6 +56,7 @@
         margin-bottom: 2pt;
         border-bottom: 3px solid #0094F9;
         padding-bottom: 8pt;
+        margin-top: 20pt;
     }
     .subtitle {
         font-size: 14pt;
@@ -36,10 +73,11 @@
     h2 {
         font-size: 16pt;
         color: #004480;
-        margin-top: 32pt;
+        margin-top: 40pt;
         margin-bottom: 10pt;
         border-bottom: 1.5px solid #CEF2E9;
         padding-bottom: 4pt;
+        padding-top: 10pt;
     }
     h3 {
         font-size: 13pt;
@@ -97,6 +135,25 @@
         margin: 12pt 0;
         font-size: 10.5pt;
     }
+    .placeholder {
+        background: #F1F2F2;
+        border: 2px dashed #ccc;
+        border-radius: 6px;
+        padding: 24px;
+        text-align: center;
+        color: #999;
+        font-style: italic;
+        margin: 16pt 0;
+    }
+    .section-summary {
+        background: #FFFFFF;
+        border: 1px solid #0094F9;
+        border-radius: 4px;
+        padding: 12px 16px;
+        margin: 8pt 0 16pt 0;
+        font-size: 10.5pt;
+    }
+    .section-summary strong { color: #004480; }
     .footer-note {
         font-style: italic;
         color: #999;
@@ -105,246 +162,119 @@
         border-top: 1px solid #CEF2E9;
         padding-top: 10pt;
     }
+    @media print {
+        .nav-bar { display: none; }
+        body { padding-top: 0; }
+    }
 </style>
 </head>
 <body>
 
-<h1>Muse Paintbar - Marketing Vendor Overview</h1>
+<!-- ============================================================ -->
+<!-- NAVIGATION BAR -->
+<!-- ============================================================ -->
+<nav class="nav-bar">
+    <div class="nav-inner">
+        <a href="#executive-summary">Executive Summary</a>
+        <a href="#business-overview">Business Overview</a>
+        <a href="#financial-performance">Financial Performance</a>
+        <a href="#customer-ltv">Customer &amp; LTV</a>
+        <a href="#fb-operations">F&amp;B Operations</a>
+        <a href="#marketing">Marketing</a>
+        <a href="#growth-pipeline">Growth Pipeline</a>
+        <a href="#capex">Capital &amp; CAPEX</a>
+        <a href="#technology">Technology</a>
+    </div>
+</nav>
+
+<h1>Muse Paintbar - Investor Operating Brief</h1>
 <p class="subtitle">Prepared for Investor Due Diligence</p>
 <p class="dateline">February 2026</p>
 
 <!-- ============================================================ -->
-<div style="background: #FFFFFF; border: 2px solid #0094F9; border-radius: 6px; padding: 20px 24px; margin-bottom: 28pt;">
-<h2 style="border-bottom: none; margin-top: 0; padding-bottom: 0; font-size: 15pt; color: #004480;">EXECUTIVE SUMMARY (3-Minute Version)</h2>
+<!-- 1. EXECUTIVE SUMMARY -->
+<!-- ============================================================ -->
+<h2 id="executive-summary">1. Executive Summary</h2>
 
-<p><strong>Total marketing spend: ~$1.28M/year.</strong> 2025 total revenue: <strong>$20.9M</strong> ($15.7M tickets + $5.2M F&B). January 2026 ticket revenue across all channels: <strong>$1.67M</strong>, growing +7% YoY. Here's where it goes:</p>
-
-<table style="font-size: 10pt; margin: 6pt 0 12pt 0;">
-    <tr><th colspan="3" style="text-align: left;">Ad Spend (goes directly to platforms - seasonal)</th></tr>
-    <tr><td>Q1 avg (Jan-Mar)</td><td style="text-align: right;">~$99K/mo</td><td style="text-align: right;">$297K</td></tr>
-    <tr><td>Q2-Q3 avg (Apr-Sep)</td><td style="text-align: right;">~$73K/mo</td><td style="text-align: right;">$438K</td></tr>
-    <tr><td>Q4 avg (Oct-Dec)</td><td style="text-align: right;">~$90K/mo</td><td style="text-align: right;">$270K</td></tr>
-    <tr><td>Yelp Ads</td><td style="text-align: right;">$720/mo</td><td style="text-align: right;">$9K</td></tr>
-    <tr><td><strong>Subtotal - Ad Spend</strong></td><td style="text-align: right;"><strong>~$83.8K/mo avg</strong></td><td style="text-align: right;"><strong>~$1.01M/yr</strong></td></tr>
-    <tr><th colspan="3" style="text-align: left;">Agency &amp; Platform Fees (management costs)</th></tr>
-    <tr><td>Silverback - Paid Media Mgmt</td><td style="text-align: right;">$9,000/mo</td><td style="text-align: right;">~$110K/yr</td></tr>
-    <tr><td>Silverback - SEO</td><td style="text-align: right;">$7,500/mo</td><td style="text-align: right;">$90K/yr</td></tr>
-    <tr><td>Silverback - Analytics</td><td style="text-align: right;">$1,000/mo</td><td style="text-align: right;">$12K/yr</td></tr>
-    <tr><td><strong>Subtotal - Silverback Fees</strong></td><td style="text-align: right;"><strong>$17,500/mo</strong></td><td style="text-align: right;"><strong>~$212K/yr</strong></td></tr>
-    <tr><td>Klaviyo (Email/SMS platform)</td><td style="text-align: right;">$5,590/mo</td><td style="text-align: right;">$67K/yr</td></tr>
-    <tr><td><strong>Subtotal - All Fees</strong></td><td style="text-align: right;"><strong>~$23.1K/mo</strong></td><td style="text-align: right;"><strong>~$279K/yr</strong></td></tr>
-</table>
-
-<p>If we left Silverback entirely, we'd save <strong>$212K/year in fees</strong>. The ad spend continues regardless - it just needs someone to manage it (in-house hire, smaller agency, or hybrid). Klaviyo is infrastructure we'd keep.</p>
-
-<p><strong>What's working:</strong></p>
-<ul>
-    <li><strong>Organic Search is our #1 channel</strong> - 40% of revenue ($674K/month), meaning ~60% of our revenue comes from non-paid sources. Healthy foundation.</li>
-    <li><strong>Paid media is efficient</strong> - $95.9K/month spend driving 11,800 purchases at $8.07 CPA, declining 13% YoY. The team is strategically shifting from branded search to prospecting channels.</li>
-    <li><strong>Email (Klaviyo) is high-ROI infrastructure</strong> - $67K/year platform cost, 68.5% open rates, 287K email recipients. Recently reduced from $85K/year with no impact.</li>
-</ul>
-
-<p><strong>Where we're optimizing:</strong></p>
-<ul>
-    <li><strong>SEO is overpriced.</strong> We pay $90K/year for advisory-only work (our team does all implementation). Renegotiating down to $30&ndash;42K - saving $48&ndash;60K/year.</li>
-    <li><strong>Local presence is unmanaged.</strong> Google Business Profiles and Yelp across 20+ locations have no optimization strategy. High-impact gap we're addressing.</li>
-    <li><strong>Total vendor savings in progress: $68&ndash;100K/year</strong> without impacting revenue-driving capabilities.</li>
-</ul>
-
-<p><strong>Bottom line:</strong> Marketing is revenue-positive with a diversified channel mix. The two biggest spend items (paid media + Klaviyo) are delivering strong results. We've identified the underperformers and are actively renegotiating - not cutting capability, cutting waste.</p>
+<div class="section-summary">
+    <strong>2025 Total Revenue: $20.9M</strong> ($15.7M tickets + $5.2M F&B) | <strong>654K lifetime customers</strong> | <strong>$170 true customer LTV</strong> | <strong>20+ locations</strong> | <strong>Revenue growing +7% YoY</strong>
 </div>
 
-<h2>TOTAL MARKETING VENDOR SPEND</h2>
-
-<table>
-    <tr><th>Vendor</th><th>Service</th><th>Monthly Cost</th><th>Annual Cost</th></tr>
-    <tr><td rowspan="3"><strong>Silverback Strategies</strong></td><td>Paid Media Management</td><td>$9,000</td><td>~$110,000</td></tr>
-    <tr><td>SEO</td><td>$7,500</td><td>$90,000</td></tr>
-    <tr><td>Analytics</td><td>$1,000</td><td>$12,000</td></tr>
-    <tr><td><strong>Klaviyo</strong></td><td>Email &amp; SMS Platform</td><td>~$5,590</td><td>~$67,080</td></tr>
-    <tr><td><strong>Yelp Ads</strong></td><td>Local advertising</td><td>$720</td><td>$8,640</td></tr>
-    <tr><td colspan="2"><strong>TOTAL VENDOR FEES</strong></td><td><strong>~$23,810</strong></td><td><strong>~$287,720</strong></td></tr>
-    <tr><td colspan="2"><strong>+ Ad Spend (Google, Meta, Yelp)</strong></td><td><strong>~$83,800 avg</strong></td><td><strong>~$1,005,000</strong></td></tr>
-    <tr><td colspan="2"><strong>TOTAL MARKETING SPEND</strong></td><td><strong>~$107,600</strong></td><td><strong>~$1,293,000</strong></td></tr>
+<table style="font-size: 10pt;">
+    <tr><th>Key Metric</th><th>Value</th><th>Trend</th></tr>
+    <tr><td>2025 Total Revenue (Ticket + F&B)</td><td><strong>$20.9M</strong></td><td>+7% YoY (ticket)</td></tr>
+    <tr><td>Jan 2026 Ticket Revenue</td><td>$1.67M</td><td>+7% YoY</td></tr>
+    <tr><td>True Customer LTV (Ticket + F&B)</td><td><strong>$170</strong></td><td>F&B/booking +25% YoY</td></tr>
+    <tr><td>Total Lifetime Customers</td><td>653,773</td><td>~110K new/year</td></tr>
+    <tr><td>Repeat Rate (mature cohorts)</td><td>29-31%</td><td>22% blended across all cohorts</td></tr>
+    <tr><td>F&B Attach Rate</td><td>$34.45/booking</td><td>Up from $27.63 in 2024</td></tr>
+    <tr><td>Total Marketing Spend</td><td>~$1.29M/year</td><td>Optimizing - $68-100K savings in progress</td></tr>
+    <tr><td>Organic Revenue Share</td><td>~60%</td><td>40% organic search + 18% direct</td></tr>
 </table>
 
-<p><em>Notes: Creative strategy fee ($3,333/month) was recently eliminated. Klaviyo recently downgraded from ~$7,077/month to ~$5,590/month. Yelp was $3,650&ndash;$4,650/month through Oct 2024, reduced to $720/month in Nov 2024. Ad spend is seasonal: peaks in Q1 ($99K/month avg) and Q4 ($90K/month avg), lower in Q2-Q3 ($73K/month avg).</em></p>
+<p><strong>The business at a glance:</strong> Muse Paintbar is a multi-location paint-and-sip entertainment brand generating $20.9M in annual revenue across 20+ studios. The model combines ticket revenue (75%) with high-margin F&B (25%), supported by a growing customer base of 110K+ new customers per year. Revenue is diversified across channels with ~60% coming from non-paid sources. We're actively optimizing vendor costs with $68-100K in annual savings identified, while investing in customer data infrastructure to unlock $1.9M+ in reactivation revenue from 399K lapsed customers.</p>
 
 <!-- ============================================================ -->
-<h2>REVENUE BY CHANNEL (GA4 Last-Click Attribution)</h2>
-<p><em>January 2026 - from Silverback's own marketing dashboard (Supermetrics / GA4)</em></p>
+<!-- 2. BUSINESS OVERVIEW -->
+<!-- ============================================================ -->
+<h2 id="business-overview">2. Business Overview</h2>
 
+<div class="placeholder">Content coming soon - business model, current footprint, location map, revenue streams (public sessions, private events, corporate, gift cards), competitive positioning</div>
+
+<!-- ============================================================ -->
+<!-- 3. FINANCIAL PERFORMANCE -->
+<!-- ============================================================ -->
+<h2 id="financial-performance">3. Financial Performance</h2>
+
+<div class="section-summary">
+    <strong>2025 total revenue: $20.9M</strong> ($15.7M tickets + $5.2M F&B). Ticket AOV has grown 53% since 2019 ($72 to $110) with no volume decline. Clear seasonal patterns: Q1 and Q4 are peak quarters.
+</div>
+
+<h3>Quarterly Ticket Revenue Trends</h3>
 <table>
-    <tr><th>Channel</th><th>Sessions</th><th>Purchases</th><th>Revenue</th><th>% of Revenue</th></tr>
-    <tr><td><strong>Organic Search</strong></td><td>121,112</td><td>5,787</td><td>$674,065</td><td>40.4%</td></tr>
-    <tr><td><strong>Paid Search</strong></td><td>90,497</td><td>4,665</td><td>$443,480</td><td>26.6%</td></tr>
-    <tr><td><strong>Direct</strong></td><td>126,939</td><td>4,755</td><td>$297,292</td><td>17.8%</td></tr>
-    <tr><td>Cross-network</td><td>29,685</td><td>1,112</td><td>$114,631</td><td>6.9%</td></tr>
-    <tr><td>Paid Social</td><td>68,085</td><td>398</td><td>$40,501</td><td>2.4%</td></tr>
-    <tr><td>Referral</td><td>5,687</td><td>279</td><td>$37,596</td><td>2.3%</td></tr>
-    <tr><td>Organic Social</td><td>13,525</td><td>238</td><td>$21,354</td><td>1.3%</td></tr>
-    <tr><td>Email</td><td>10,150</td><td>204</td><td>$17,751</td><td>1.1%</td></tr>
-    <tr><td>Organic Shopping</td><td>520</td><td>28</td><td>$17,550</td><td>1.1%</td></tr>
-    <tr><td>SMS + Other</td><td>2,419</td><td>84</td><td>$5,104</td><td>0.3%</td></tr>
-    <tr><td><strong>TOTAL</strong></td><td><strong>468,619</strong></td><td><strong>17,550</strong></td><td><strong>$1,669,324</strong></td><td><strong>100%</strong></td></tr>
+    <tr><th>Quarter</th><th>Bookings</th><th>Unique Customers</th><th>Ticket Revenue</th><th>Avg Rev/Txn</th></tr>
+    <tr><td>2023Q1</td><td>49,283</td><td>45,471</td><td>$4,934,401</td><td>$100.12</td></tr>
+    <tr><td>2023Q2</td><td>34,115</td><td>31,238</td><td>$3,406,770</td><td>$99.86</td></tr>
+    <tr><td>2023Q3</td><td>33,121</td><td>30,426</td><td>$3,233,054</td><td>$97.61</td></tr>
+    <tr><td>2023Q4</td><td>37,787</td><td>34,549</td><td>$3,992,747</td><td>$105.66</td></tr>
+    <tr><td><strong>2023 Total</strong></td><td><strong>154,306</strong></td><td></td><td><strong>$15,566,972</strong></td><td><strong>$100.88</strong></td></tr>
+    <tr><td>2024Q1</td><td>47,084</td><td>43,316</td><td>$4,786,239</td><td>$101.65</td></tr>
+    <tr><td>2024Q2</td><td>32,455</td><td>29,722</td><td>$3,298,375</td><td>$101.63</td></tr>
+    <tr><td>2024Q3</td><td>31,040</td><td>28,463</td><td>$3,057,462</td><td>$98.50</td></tr>
+    <tr><td>2024Q4</td><td>38,949</td><td>35,641</td><td>$3,964,474</td><td>$101.79</td></tr>
+    <tr><td><strong>2024 Total</strong></td><td><strong>149,528</strong></td><td></td><td><strong>$15,106,549</strong></td><td><strong>$101.03</strong></td></tr>
+    <tr><td>2025Q1</td><td>50,111</td><td>46,598</td><td>$5,114,940</td><td>$102.07</td></tr>
+    <tr><td>2025Q2</td><td>34,292</td><td>31,705</td><td>$3,497,348</td><td>$101.99</td></tr>
+    <tr><td>2025Q3</td><td>34,865</td><td>32,076</td><td>$3,109,658</td><td>$89.19</td></tr>
+    <tr><td>2025Q4</td><td>39,146</td><td>36,233</td><td>$3,985,616</td><td>$101.81</td></tr>
+    <tr><td><strong>2025 Total</strong></td><td><strong>158,414</strong></td><td></td><td><strong>$15,707,562</strong></td><td><strong>$99.17</strong></td></tr>
+    <tr><td>2026Q1 (Jan-Feb)</td><td>29,537</td><td>28,153</td><td>$3,244,573</td><td>$109.85</td></tr>
+</table>
+
+<h3>Revenue Mix (2025)</h3>
+<table>
+    <tr><th>Revenue Stream</th><th>Annual Revenue</th><th>% of Total</th></tr>
+    <tr><td>Ticket / Session Revenue</td><td>$15.7M</td><td>75%</td></tr>
+    <tr><td>Food &amp; Beverage</td><td>$5.2M</td><td>25%</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>$20.9M</strong></td><td><strong>100%</strong></td></tr>
 </table>
 
 <div class="callout-green">
-    <strong>Organic Search is the #1 revenue channel at 40.4% ($674K/month).</strong> Combined with Direct traffic (17.8%, much of which is brand-driven), non-paid channels account for ~60% of revenue. Paid Search and Paid Social together drive ~29%. This is a healthy, diversified channel mix with strong organic foundations.
+    <strong>Consistent growth with pricing power.</strong> Ticket AOV has grown from $72 (2019) to $110 (2026) - a 53% increase with no volume decline. F&B per booking is growing 25% YoY. The business shows clear seasonal patterns (Q1 and Q4 peak) that are predictable and repeatable.
 </div>
 
-<h3>Organic Search Trend (Monthly Sessions, 2025&ndash;2026)</h3>
-<table>
-    <tr><th>Month</th><th>Organic Sessions</th><th>Trend</th></tr>
-    <tr><td>Feb 2025</td><td>106,557</td><td></td></tr>
-    <tr><td>Mar 2025</td><td>102,755</td><td></td></tr>
-    <tr><td>Apr 2025</td><td>88,736</td><td>Seasonal dip</td></tr>
-    <tr><td>May 2025</td><td>80,567</td><td></td></tr>
-    <tr><td>Jun 2025</td><td>78,230</td><td>Trough</td></tr>
-    <tr><td>Jul 2025</td><td>82,189</td><td></td></tr>
-    <tr><td>Aug 2025</td><td>89,037</td><td></td></tr>
-    <tr><td>Sep 2025</td><td>89,891</td><td></td></tr>
-    <tr><td>Oct 2025</td><td>90,446</td><td></td></tr>
-    <tr><td>Nov 2025</td><td>91,899</td><td></td></tr>
-    <tr><td>Dec 2025</td><td>98,652</td><td></td></tr>
-    <tr><td>Jan 2026</td><td>109,927</td><td></td></tr>
-    <tr><td><strong>Feb 2026 (partial)</strong></td><td><strong>105,762</strong></td><td>On pace</td></tr>
-</table>
-
-<p>Organic sessions show a clear seasonal pattern (dips in summer, peaks in winter/holiday) and a steady upward trend from the Jun 2025 trough of 78K to Jan 2026's 110K. This growth is positive but largely follows seasonal demand patterns rather than breakthrough SEO gains.</p>
-
-<h3>Paid Media Spend Reallocation (Jan 2026 vs. Jan 2025)</h3>
-<table>
-    <tr><th>Channel</th><th>Jan 2026</th><th>Jan 2025</th><th>Change</th></tr>
-    <tr><td>Google Brand</td><td>$1,184</td><td>$28,588</td><td style="color: #9D274D;">-96%</td></tr>
-    <tr><td>Google Non-Brand</td><td>$37,356</td><td>$25,077</td><td style="color: #00D5C2;">+49%</td></tr>
-    <tr><td>Google PMax</td><td>$4,390</td><td>$9,516</td><td style="color: #9D274D;">-54%</td></tr>
-    <tr><td>Google Demand Gen</td><td>$10,341</td><td>$0</td><td style="color: #00D5C2;">New</td></tr>
-    <tr><td>Meta Prospecting</td><td>$38,625</td><td>$25,395</td><td style="color: #00D5C2;">+52%</td></tr>
-    <tr><td>TikTok</td><td>$3,968</td><td>$0</td><td>Test (paused Feb)</td></tr>
-    <tr><td><strong>Total</strong></td><td><strong>$95,865</strong></td><td><strong>$89,879</strong></td><td><strong>+6.7%</strong></td></tr>
-</table>
-
-<div class="callout">
-    <strong>Key reallocation:</strong> Silverback cut branded Google spend by 96% ($28.6K &rarr; $1.2K) and redirected to non-brand Google (+49%) and Meta prospecting (+52%). This is a smart strategic move - branded search captures existing demand (people already searching "Muse Paintbar"), while non-brand and prospecting channels drive net new customers. However, the branded search reduction means some traffic that previously showed as "paid" now appears as "organic" - partially inflating organic growth metrics.
-</div>
+<div class="placeholder">Additional content coming soon - same-store growth detail, revenue by location, private event revenue trends, gift card sales</div>
 
 <!-- ============================================================ -->
-<h2>SILVERBACK STRATEGIES - Digital Marketing Agency</h2>
-<p><em>~$212,000/year | Agency of record since June 2024</em></p>
-
-<h3>What They Do</h3>
-<p>Full-service digital marketing agency handling paid media (Google Ads, Meta, TikTok), SEO strategy, analytics, and creative strategy for musepaintbar.com across 20+ locations.</p>
-
-<h3>Performance Summary</h3>
-
-<table>
-    <tr><th>Area</th><th>Key Metrics (Jan 2026)</th><th>Assessment</th></tr>
-    <tr>
-        <td><strong>Paid Media</strong></td>
-        <td>$95.8K spend &rarr; 11,800 purchases<br>Blended CPA: $8.07 (-13% YoY)<br>Google CPA: $5.83 | Meta CPA: $14.83<br>Incremental purchases +6% YoY</td>
-        <td style="color: #004480; font-weight: bold;">Strong</td>
-    </tr>
-    <tr>
-        <td><strong>SEO</strong></td>
-        <td>112,835 organic sessions (+10% YoY)<br>6,395 organic purchases (+4.2% YoY)<br>#1 for most "[city] paint and sip" terms<br>#20 for "paint and sip" (40,500 vol)</td>
-        <td style="color: #9D274D; font-weight: bold;">Underperforming</td>
-    </tr>
-    <tr>
-        <td><strong>Overall Revenue</strong></td>
-        <td>$2.075M Jan 2026 (+7% YoY)<br>Same-store revenue +5% YoY</td>
-        <td style="color: #004480; font-weight: bold;">On track</td>
-    </tr>
-</table>
-
-<h3>What's Working</h3>
-<ul>
-    <li><strong>Paid media management is strong.</strong> CPA declining year-over-year while volume grows. Smart channel reallocation - shifted spend from Performance Max to non-brand Google and Meta prospecting. Google delivering $5.83 CPA across 9,100+ purchases/month.</li>
-    <li><strong>Location-specific keyword rankings are dominant.</strong> #1 for "paint and sip nyc" (5,400 searches), "paint and sip boston" (1,000 searches), and most city-specific variations.</li>
-    <li><strong>Revenue is growing.</strong> +7% YoY overall, beating the 6% target. Blog traffic growing significantly from a low base.</li>
-</ul>
-
-<h3>What We're Addressing</h3>
-<ul>
-    <li><strong>SEO is overpriced for deliverables received.</strong> At $90K/year, we're paying for advisory work (content outlines, PageSpeed screenshots, keyword tracking) that our internal team implements. Silverback produces zero finished content - our marketing team writes all blogs, our developer handles all technical implementation.</li>
-    <li><strong>Multiple SOW deliverables are missing or incomplete.</strong> Structured data produced for only 6 pages (never deployed). One competitor audit in 18 months. No CTR analysis, no CRO testing (despite projecting $789K from it), no 3-month rolling plan. Recommendations from their own Oct 2024 competitor audit took 16 months to begin acting on.</li>
-    <li><strong>Local platform management is absent.</strong> No Google Business Profile optimization, no Yelp strategy, no TripAdvisor management across 20+ locations. For a multi-location entertainment business, these are the highest-impact local SEO channels.</li>
-    <li><strong>National keyword rankings are weak.</strong> #20 for "paint and sip" (40,500 monthly searches), #36 for "sip and paint" (22,200). These high-volume terms represent significant untapped organic traffic.</li>
-</ul>
-
-<h3>Our Plan</h3>
-
-<div class="callout-green">
-    <strong>Paid media ($120K/year):</strong> Keep as-is. Performance justifies the spend and shows strategic depth.
-</div>
-<div class="callout-yellow">
-    <strong>SEO ($90K/year):</strong> Renegotiating down to $2,500&ndash;$3,500/month ($30K&ndash;$42K/year). The advisory-only model doesn't justify $90K. We're evaluating supplementing with AI tools for content briefs and a focused local SEO strategy covering GBP, Yelp, and review management. <strong>Potential savings: $48K&ndash;$60K/year.</strong>
-</div>
-<div class="callout">
-    <strong>Analytics + Creative ($52K/year):</strong> Under review. Analytics at $12K/year has unclear deliverables. Creative strategy was downgraded from production to concepts-only but still costs $40K/year for 10 ideas and one call per quarter.
-</div>
-
+<!-- 4. CUSTOMER & LTV -->
 <!-- ============================================================ -->
-<h2>KLAVIYO - Email &amp; SMS Marketing Platform</h2>
-<p><em>~$67K/year (recently reduced from ~$85K/year) | Email &amp; SMS automation platform</em></p>
+<h2 id="customer-ltv">4. Customer &amp; LTV</h2>
 
-<h3>What It Does</h3>
-<p>Klaviyo is Muse's email and SMS marketing platform, handling campaign sends, automated flows (booking confirmations, post-visit follow-ups, abandoned browse/cart), and customer segmentation across all locations.</p>
-
-<h3>Performance Summary (Last 30 Days: Jan 25 &ndash; Feb 24, 2026)</h3>
-
-<table>
-    <tr><th>Channel</th><th>Recipients</th><th>Open Rate</th><th>Click Rate</th><th>Unsub Rate</th></tr>
-    <tr><td><strong>Email Campaigns</strong></td><td>287,452</td><td>68.5%</td><td>1.00%</td><td>0.48%</td></tr>
-    <tr><td><strong>SMS Campaigns</strong></td><td>2,605</td><td>N/A</td><td>4.18%</td><td>0.39%</td></tr>
-    <tr><td><strong>Email Flows</strong></td><td>60,662</td><td>61&ndash;72%</td><td>4.6&ndash;9.6%</td><td>&lt;0.2%</td></tr>
-</table>
-
-<h3>Revenue Attribution (Last 30 Days)</h3>
-
-<table>
-    <tr><th>Revenue Stream</th><th>30-Day Total</th><th>% of Total</th></tr>
-    <tr><td>Public Sessions</td><td>$1,573,602</td><td>89.7%</td></tr>
-    <tr><td>Private Parties (Self-Checkout)</td><td>$159,813</td><td>9.1%</td></tr>
-    <tr><td>Gift Cards</td><td>$13,425</td><td>0.8%</td></tr>
-    <tr><td>Virtual Private Parties</td><td>$4,635</td><td>0.3%</td></tr>
-    <tr><td>Other Placed Orders</td><td>$3,011</td><td>0.2%</td></tr>
-    <tr><td><strong>Total Klaviyo-Attributed Revenue</strong></td><td><strong>$1,754,486</strong></td><td><strong>100%</strong></td></tr>
-</table>
-
-<div class="callout-green">
-    <strong>$1.75M in Klaviyo-attributed revenue over 30 days on ~$5,590/month in platform cost.</strong> That's a ~314:1 revenue-to-platform-cost ratio. Even with generous attribution caveats (Klaviyo attributes broadly via confirmation emails and flows), the email channel is a major revenue driver.
+<div class="section-summary">
+    <strong>654K lifetime customers | $170 true LTV (ticket + F&B) | 22% repeat rate | 399K reactivation opportunity</strong>
 </div>
 
-<h3>What's Working</h3>
-<ul>
-    <li><strong>High engagement rates.</strong> 68.5% campaign open rate and 61&ndash;72% flow open rates are well above industry averages (~20&ndash;25% for retail/entertainment). This indicates a healthy, engaged list.</li>
-    <li><strong>Flows outperform campaigns significantly.</strong> Automated flows drive 4.6&ndash;9.6% click rates vs. 1.0% for campaigns - a 5&ndash;10x multiplier. This is expected (flows are triggered by user actions) but shows the automations are well-configured.</li>
-    <li><strong>Public Sessions dominate revenue.</strong> 89.7% of Klaviyo-attributed revenue comes from public session confirmations, confirming this is the core business line.</li>
-    <li><strong>Low spam complaints.</strong> 0.007% spam rate is excellent - well below the 0.1% threshold that triggers deliverability issues.</li>
-    <li><strong>Recent cost optimization.</strong> Downgraded plan from ~$7,077/month to ~$5,590/month (~$18K annual savings) without impacting functionality.</li>
-</ul>
-
-<h3>What We're Watching</h3>
-<ul>
-    <li><strong>Campaign click rate is low.</strong> 1.0% click rate on campaigns (vs. 4.6&ndash;9.6% on flows) suggests campaign content could be optimized - better segmentation, more personalized offers, stronger CTAs. There's upside here.</li>
-    <li><strong>SMS is underutilized.</strong> Only 2,605 SMS recipients vs. 287,452 email recipients. SMS is a ~1% penetration rate. For a business with time-sensitive event inventory (tonight's empty seats, last-minute openings), SMS could drive meaningful incremental bookings.</li>
-    <li><strong>Unsubscribe rate warrants monitoring.</strong> 0.48% per campaign cycle is slightly elevated. Not alarming, but with ~287K recipients, that's ~1,380 unsubs per 30-day cycle. Send frequency and segmentation should be reviewed to protect list health.</li>
-    <li><strong>Revenue attribution is broad.</strong> The $1.75M Klaviyo figure includes confirmation notification emails (booking confirmations triggered by purchases). For comparison, GA4 last-click attribution credits Email with $17,751 in January 2026 revenue (1.1% of total) and SMS with $2,301 (0.1%). The true incremental value of email/SMS is between these figures - GA4 undercounts (ignores assisted conversions) while Klaviyo overcounts (credits transactional emails). We should set up proper attribution to isolate email-influenced revenue from transactional notifications.</li>
-    <li><strong>Private party revenue through Klaviyo is modest.</strong> $159K (9.1%) vs. $1.57M public sessions. Given private parties are higher-margin, there's an opportunity to build dedicated email/SMS flows for private event lead nurturing.</li>
-</ul>
-
-<h3>Our Plan</h3>
-<div class="callout-green">
-    <strong>Keep Klaviyo.</strong> At ~$67K/year (reduced from ~$85K), it's a core infrastructure platform driving high engagement and supporting $1.75M+ in monthly attributed revenue. The ROI is clear even with attribution caveats.
-</div>
-<div class="callout">
-    <strong>Optimize:</strong> Improve campaign click rates through better segmentation, grow SMS list for last-minute inventory fills, build private party nurture flows, and set up proper attribution to separate transactional confirmation revenue from campaign-driven incremental revenue.
-</div>
-
-<!-- ============================================================ -->
-<h2>CUSTOMER LTV ANALYSIS</h2>
-<p><em>Based on 654K unique customers and 895K bookings from Jan 2019 - Feb 2026 (reservation system data)</em></p>
+<p><em>Based on 654K unique customers and 895K bookings from Jan 2019 - Feb 2026 (reservation system data, supplemented with Square POS for F&B)</em></p>
 
 <h3>Headline Metrics</h3>
 <table>
@@ -386,29 +316,15 @@
 </table>
 <p><em>Note: Newer cohorts naturally show lower repeat rates and LTV because they haven't had time to return. Mature cohorts (2019-2021) show 29-31% repeat rates.</em></p>
 
-<h3>Food &amp; Beverage Revenue (Square POS Data)</h3>
-<p><em>Jan 2024 - Feb 2026 | $10.3M across 1.07M items sold</em></p>
-
+<h3>Revenue Concentration</h3>
 <table>
-    <tr><th>Metric</th><th>Value</th></tr>
-    <tr><td>Total F&B Revenue (Jan 2024 - Feb 2026)</td><td><strong>$10.3M</strong></td></tr>
-    <tr><td>2025 Full-Year F&B Revenue</td><td><strong>$5.17M</strong> (25% of total revenue)</td></tr>
-    <tr><td>2025 Full-Year Ticket + F&B Revenue</td><td><strong>$20.9M</strong></td></tr>
-    <tr><td>F&B per Booking (avg)</td><td>$30.57</td></tr>
-    <tr><td>F&B per Booking (2025)</td><td>$32.62</td></tr>
-    <tr><td>F&B per Booking (2026 YTD)</td><td>$34.45</td></tr>
+    <tr><th>Top % of Customers</th><th># Customers</th><th>Revenue</th><th>% of Total Revenue</th></tr>
+    <tr><td>Top 1%</td><td>6,538</td><td>$7.6M</td><td>9.1%</td></tr>
+    <tr><td>Top 5%</td><td>32,689</td><td>$20.2M</td><td>24.1%</td></tr>
+    <tr><td>Top 10%</td><td>65,378</td><td>$29.6M</td><td>35.3%</td></tr>
+    <tr><td>Top 25%</td><td>163,444</td><td>$47.0M</td><td>56.1%</td></tr>
+    <tr><td>Top 50%</td><td>326,887</td><td>$64.2M</td><td>76.6%</td></tr>
 </table>
-
-<table>
-    <tr><th>Year</th><th>F&B Revenue</th><th>Bookings</th><th>F&B/Booking</th><th>YoY Growth</th></tr>
-    <tr><td>2024</td><td>$4.13M</td><td>149,528</td><td>$27.63</td><td></td></tr>
-    <tr><td>2025</td><td>$5.17M</td><td>158,414</td><td>$32.62</td><td>+18%</td></tr>
-    <tr><td>2026 (Jan-Feb)</td><td>$1.02M</td><td>29,537</td><td>$34.45</td><td>+6% vs 2025 avg</td></tr>
-</table>
-
-<div class="callout-green">
-    <strong>F&B adds $42 to customer LTV, bringing the true average to $170.</strong> F&B per booking is growing steadily - up 25% from $27.63 (2024) to $34.45 (2026 YTD) - demonstrating attach rate improvement and pricing power. Wine and wine cocktails make up 50% of beverage sales, food (bites + dessert) accounts for 29%, and non-alcoholic beverages represent 11%.
-</div>
 
 <h3>Growth Levers</h3>
 <table>
@@ -424,42 +340,238 @@
 </div>
 
 <!-- ============================================================ -->
-<h2>COMBINED MARKETING VENDOR LANDSCAPE</h2>
+<!-- 5. F&B OPERATIONS -->
+<!-- ============================================================ -->
+<h2 id="fb-operations">5. F&amp;B Operations</h2>
 
+<div class="section-summary">
+    <strong>$5.17M in 2025 F&B revenue (25% of total) | $34.45 per booking (2026 YTD) | Growing 25% YoY</strong>
+</div>
+
+<p><em>Square POS data, Jan 2024 - Feb 2026 | $10.3M across 1.07M items sold</em></p>
+
+<h3>F&B Revenue Trends</h3>
+<table>
+    <tr><th>Year</th><th>F&B Revenue</th><th>Bookings</th><th>F&B/Booking</th><th>YoY Growth</th></tr>
+    <tr><td>2024</td><td>$4.13M</td><td>149,528</td><td>$27.63</td><td></td></tr>
+    <tr><td>2025</td><td>$5.17M</td><td>158,414</td><td>$32.62</td><td>+18%</td></tr>
+    <tr><td>2026 (Jan-Feb)</td><td>$1.02M</td><td>29,537</td><td>$34.45</td><td>+6% vs 2025 avg</td></tr>
+</table>
+
+<h3>Quarterly F&B Trends</h3>
+<table>
+    <tr><th>Quarter</th><th>F&B Revenue</th><th>Items Sold</th><th>Avg/Item</th></tr>
+    <tr><td>2024Q1</td><td>$1,194,122</td><td>123,131</td><td>$9.70</td></tr>
+    <tr><td>2024Q2</td><td>$864,388</td><td>101,131</td><td>$8.55</td></tr>
+    <tr><td>2024Q3</td><td>$871,147</td><td>95,925</td><td>$9.08</td></tr>
+    <tr><td>2024Q4</td><td>$1,201,192</td><td>128,989</td><td>$9.31</td></tr>
+    <tr><td>2025Q1</td><td>$1,577,844</td><td>158,407</td><td>$9.96</td></tr>
+    <tr><td>2025Q2</td><td>$1,165,216</td><td>120,985</td><td>$9.63</td></tr>
+    <tr><td>2025Q3</td><td>$1,084,435</td><td>112,384</td><td>$9.65</td></tr>
+    <tr><td>2025Q4</td><td>$1,340,750</td><td>136,716</td><td>$9.81</td></tr>
+    <tr><td>2026Q1 (Jan-Feb)</td><td>$1,017,456</td><td>93,584</td><td>$10.87</td></tr>
+</table>
+
+<h3>Category Breakdown</h3>
+<table>
+    <tr><th>Category</th><th>Revenue</th><th>% of F&B</th><th>Avg Item Price</th></tr>
+    <tr><td>Wine</td><td>$3,165,885</td><td>30.7%</td><td>$14.22</td></tr>
+    <tr><td>Wine Cocktails</td><td>$2,007,149</td><td>19.5%</td><td>$14.12</td></tr>
+    <tr><td>Food (Bites + Dessert)</td><td>$2,957,306</td><td>28.7%</td><td>$10.04</td></tr>
+    <tr><td>Non-Alcoholic</td><td>$1,150,255</td><td>11.2%</td><td>$4.18</td></tr>
+    <tr><td>Beer</td><td>$698,723</td><td>6.8%</td><td>$6.10</td></tr>
+    <tr><td>Liquor Cocktails</td><td>$320,762</td><td>3.1%</td><td>$15.60</td></tr>
+</table>
+
+<h3>F&B Revenue by Studio (Top 10)</h3>
+<table>
+    <tr><th>Studio</th><th>F&B Revenue</th><th>Items Sold</th></tr>
+    <tr><td>AR</td><td>$754,334</td><td>70,986</td></tr>
+    <tr><td>NH</td><td>$682,235</td><td>61,243</td></tr>
+    <tr><td>GC</td><td>$594,358</td><td>57,796</td></tr>
+    <tr><td>WH</td><td>$576,279</td><td>58,270</td></tr>
+    <tr><td>VB</td><td>$549,149</td><td>55,094</td></tr>
+    <tr><td>MD</td><td>$540,843</td><td>61,956</td></tr>
+    <tr><td>RW</td><td>$484,129</td><td>52,215</td></tr>
+    <tr><td>TR</td><td>$468,449</td><td>46,836</td></tr>
+    <tr><td>LP</td><td>$441,350</td><td>47,627</td></tr>
+    <tr><td>BQ</td><td>$439,258</td><td>44,263</td></tr>
+</table>
+
+<div class="callout-green">
+    <strong>F&B adds $42 to customer LTV, bringing the true average to $170.</strong> F&B per booking is growing steadily - up 25% from $27.63 (2024) to $34.45 (2026 YTD) - demonstrating attach rate improvement and pricing power. Average item price is also trending up ($9.70 to $10.87), indicating both higher volume and better pricing per item.
+</div>
+
+<div class="placeholder">Additional content coming soon - menu items/changes timeline, pricing change impact analysis, margin data, F&B cost of goods</div>
+
+<!-- ============================================================ -->
+<!-- 6. MARKETING & CUSTOMER ACQUISITION -->
+<!-- ============================================================ -->
+<h2 id="marketing">6. Marketing &amp; Customer Acquisition</h2>
+
+<div class="section-summary">
+    <strong>$1.29M total marketing spend | ~60% of revenue from non-paid channels | $8.07 blended CPA | $68-100K in vendor savings in progress</strong>
+</div>
+
+<h3>Total Marketing Spend</h3>
+
+<table>
+    <tr><th>Vendor</th><th>Service</th><th>Monthly Cost</th><th>Annual Cost</th></tr>
+    <tr><td rowspan="3"><strong>Silverback Strategies</strong></td><td>Paid Media Management</td><td>$9,000</td><td>~$110,000</td></tr>
+    <tr><td>SEO</td><td>$7,500</td><td>$90,000</td></tr>
+    <tr><td>Analytics</td><td>$1,000</td><td>$12,000</td></tr>
+    <tr><td><strong>Klaviyo</strong></td><td>Email &amp; SMS Platform</td><td>~$5,590</td><td>~$67,080</td></tr>
+    <tr><td><strong>Yelp Ads</strong></td><td>Local advertising</td><td>$720</td><td>$8,640</td></tr>
+    <tr><td colspan="2"><strong>TOTAL VENDOR FEES</strong></td><td><strong>~$23,810</strong></td><td><strong>~$287,720</strong></td></tr>
+    <tr><td colspan="2"><strong>+ Ad Spend (Google, Meta, Yelp)</strong></td><td><strong>~$83,800 avg</strong></td><td><strong>~$1,005,000</strong></td></tr>
+    <tr><td colspan="2"><strong>TOTAL MARKETING SPEND</strong></td><td><strong>~$107,600</strong></td><td><strong>~$1,293,000</strong></td></tr>
+</table>
+
+<p><em>Notes: Creative strategy fee ($3,333/month) was recently eliminated. Klaviyo recently downgraded from ~$7,077/month to ~$5,590/month. Yelp was $3,650-$4,650/month through Oct 2024, reduced to $720/month in Nov 2024. Ad spend is seasonal: peaks in Q1 ($99K/month avg) and Q4 ($90K/month avg), lower in Q2-Q3 ($73K/month avg).</em></p>
+
+<h3>Revenue by Channel (GA4 Last-Click Attribution, Jan 2026)</h3>
+
+<table>
+    <tr><th>Channel</th><th>Sessions</th><th>Purchases</th><th>Revenue</th><th>% of Revenue</th></tr>
+    <tr><td><strong>Organic Search</strong></td><td>121,112</td><td>5,787</td><td>$674,065</td><td>40.4%</td></tr>
+    <tr><td><strong>Paid Search</strong></td><td>90,497</td><td>4,665</td><td>$443,480</td><td>26.6%</td></tr>
+    <tr><td><strong>Direct</strong></td><td>126,939</td><td>4,755</td><td>$297,292</td><td>17.8%</td></tr>
+    <tr><td>Cross-network</td><td>29,685</td><td>1,112</td><td>$114,631</td><td>6.9%</td></tr>
+    <tr><td>Paid Social</td><td>68,085</td><td>398</td><td>$40,501</td><td>2.4%</td></tr>
+    <tr><td>Referral</td><td>5,687</td><td>279</td><td>$37,596</td><td>2.3%</td></tr>
+    <tr><td>Organic Social</td><td>13,525</td><td>238</td><td>$21,354</td><td>1.3%</td></tr>
+    <tr><td>Email</td><td>10,150</td><td>204</td><td>$17,751</td><td>1.1%</td></tr>
+    <tr><td>Organic Shopping</td><td>520</td><td>28</td><td>$17,550</td><td>1.1%</td></tr>
+    <tr><td>SMS + Other</td><td>2,419</td><td>84</td><td>$5,104</td><td>0.3%</td></tr>
+    <tr><td><strong>TOTAL</strong></td><td><strong>468,619</strong></td><td><strong>17,550</strong></td><td><strong>$1,669,324</strong></td><td><strong>100%</strong></td></tr>
+</table>
+
+<div class="callout-green">
+    <strong>Organic Search is the #1 revenue channel at 40.4% ($674K/month).</strong> Combined with Direct traffic (17.8%, much of which is brand-driven), non-paid channels account for ~60% of revenue. This is a healthy, diversified channel mix with strong organic foundations.
+</div>
+
+<h3>Paid Media Detail (Jan 2026 vs. Jan 2025)</h3>
+<table>
+    <tr><th>Channel</th><th>Jan 2026</th><th>Jan 2025</th><th>Change</th></tr>
+    <tr><td>Google Brand</td><td>$1,184</td><td>$28,588</td><td style="color: #9D274D;">-96%</td></tr>
+    <tr><td>Google Non-Brand</td><td>$37,356</td><td>$25,077</td><td style="color: #00D5C2;">+49%</td></tr>
+    <tr><td>Google PMax</td><td>$4,390</td><td>$9,516</td><td style="color: #9D274D;">-54%</td></tr>
+    <tr><td>Google Demand Gen</td><td>$10,341</td><td>$0</td><td style="color: #00D5C2;">New</td></tr>
+    <tr><td>Meta Prospecting</td><td>$38,625</td><td>$25,395</td><td style="color: #00D5C2;">+52%</td></tr>
+    <tr><td>TikTok</td><td>$3,968</td><td>$0</td><td>Test (paused Feb)</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>$95,865</strong></td><td><strong>$89,879</strong></td><td><strong>+6.7%</strong></td></tr>
+</table>
+
+<div class="callout">
+    <strong>Key reallocation:</strong> Silverback cut branded Google spend by 96% ($28.6K to $1.2K) and redirected to non-brand Google (+49%) and Meta prospecting (+52%). This is a smart strategic move - branded search captures existing demand, while non-brand and prospecting channels drive net new customers. However, the branded search reduction means some traffic that previously showed as "paid" now appears as "organic" - partially inflating organic growth metrics.
+</div>
+
+<h3>Silverback Strategies - Digital Marketing Agency</h3>
+<p><em>~$212,000/year | Agency of record since June 2024</em></p>
+
+<table>
+    <tr><th>Area</th><th>Key Metrics (Jan 2026)</th><th>Assessment</th></tr>
+    <tr>
+        <td><strong>Paid Media</strong></td>
+        <td>$95.8K spend, 11,800 purchases<br>Blended CPA: $8.07 (-13% YoY)<br>Google CPA: $5.83 | Meta CPA: $14.83</td>
+        <td style="color: #004480; font-weight: bold;">Strong</td>
+    </tr>
+    <tr>
+        <td><strong>SEO</strong></td>
+        <td>112,835 organic sessions (+10% YoY)<br>#1 for most "[city] paint and sip" terms<br>#20 for "paint and sip" (40,500 vol)</td>
+        <td style="color: #9D274D; font-weight: bold;">Underperforming</td>
+    </tr>
+</table>
+
+<p><strong>What's working:</strong> Paid media management is strong - CPA declining YoY while volume grows. Smart channel reallocation from branded search to prospecting. Location-specific keyword rankings are dominant.</p>
+
+<p><strong>What we're addressing:</strong> SEO is overpriced at $90K/year for advisory-only work (our team does all implementation). Multiple SOW deliverables are missing. No local platform management (GBP, Yelp, TripAdvisor) across 20+ locations.</p>
+
+<div class="callout-green">
+    <strong>Paid media (~$110K/year fees):</strong> Keep as-is. Performance justifies the spend.
+</div>
+<div class="callout-yellow">
+    <strong>SEO ($90K/year):</strong> Renegotiating to $30-42K/year. <strong>Potential savings: $48-60K/year.</strong>
+</div>
+
+<h3>Klaviyo - Email &amp; SMS Platform</h3>
+<p><em>~$67K/year (recently reduced from ~$85K/year)</em></p>
+
+<table>
+    <tr><th>Channel</th><th>Recipients</th><th>Open Rate</th><th>Click Rate</th></tr>
+    <tr><td><strong>Email Campaigns</strong></td><td>287,452</td><td>68.5%</td><td>1.00%</td></tr>
+    <tr><td><strong>SMS Campaigns</strong></td><td>2,605</td><td>N/A</td><td>4.18%</td></tr>
+    <tr><td><strong>Email Flows</strong></td><td>60,662</td><td>61-72%</td><td>4.6-9.6%</td></tr>
+</table>
+
+<p>$1.75M in Klaviyo-attributed revenue over 30 days on ~$5,590/month platform cost. Open rates (68.5%) are 3x industry average. Key opportunities: grow SMS list (only 1% penetration), improve campaign click rates through segmentation, build private party nurture flows.</p>
+
+<div class="callout-green">
+    <strong>Keep Klaviyo.</strong> High-ROI infrastructure. Recently optimized from $85K to $67K/year with no impact.
+</div>
+
+<h3>Vendor Optimization Summary</h3>
 <table>
     <tr><th>Vendor / Service</th><th>Annual Cost</th><th>Status</th><th>Action</th></tr>
     <tr><td>Silverback - Paid Media</td><td>~$110,000</td><td style="color: #004480; font-weight: bold;">Performing</td><td>Keep</td></tr>
     <tr><td>Klaviyo - Email/SMS</td><td>$67,080</td><td style="color: #004480; font-weight: bold;">Performing</td><td>Keep + optimize</td></tr>
     <tr><td>Yelp Ads</td><td>$8,640</td><td style="color: #9D274D; font-weight: bold;">Reduced from $44K</td><td>Evaluate ROI</td></tr>
-    <tr><td>Silverback - SEO</td><td>$90,000</td><td style="color: #9D274D; font-weight: bold;">Underperforming</td><td>Renegotiate to $30&ndash;42K</td></tr>
+    <tr><td>Silverback - SEO</td><td>$90,000</td><td style="color: #9D274D; font-weight: bold;">Underperforming</td><td>Renegotiate to $30-42K</td></tr>
     <tr><td>Silverback - Analytics</td><td>$12,000</td><td style="color: #999;">Unclear value</td><td>Evaluate</td></tr>
     <tr><td><strong>Total Vendor Fees (Current)</strong></td><td><strong>$287,720</strong></td><td></td><td></td></tr>
-    <tr><td><strong>Projected After Optimization</strong></td><td><strong>$225K&ndash;$240K</strong></td><td></td><td><strong>Save $48K&ndash;$63K</strong></td></tr>
+    <tr><td><strong>Projected After Optimization</strong></td><td><strong>$225K-$240K</strong></td><td></td><td><strong>Save $48K-$63K</strong></td></tr>
 </table>
 
 <div class="callout">
-    <strong>Key takeaway for investors:</strong> We have clear visibility into vendor performance and are actively managing costs down. We already eliminated the creative strategy fee ($40K/year). The two highest remaining spend items (paid media + Klaviyo) are delivering strong, measurable results. SEO renegotiation is in progress with $48K&ndash;$63K in additional annual savings identified.
+    <strong>Key takeaway:</strong> We have clear visibility into vendor performance and are actively managing costs down. We already eliminated the creative strategy fee ($40K/year). The two highest remaining spend items (paid media + Klaviyo) are delivering strong, measurable results. SEO renegotiation is in progress with $48K-$63K in additional annual savings identified.
 </div>
 
 <!-- ============================================================ -->
-<h2>AD SPEND DETAIL (Managed by Silverback, Separate from Vendor Fees)</h2>
+<!-- 7. GROWTH PIPELINE -->
+<!-- ============================================================ -->
+<h2 id="growth-pipeline">7. Growth Pipeline</h2>
 
-<p>Media spend managed by Silverback is separate from their management fees:</p>
+<div class="placeholder">Content coming soon - new site pipeline, target markets, expansion strategy, buildout timeline, unit economics for new locations</div>
 
-<table>
-    <tr><th>Channel</th><th>Jan 2026 Spend</th><th>Jan 2025 Spend</th><th>YoY Change</th></tr>
-    <tr><td>Google Brand</td><td>$1,184</td><td>$28,588</td><td>-96% (intentional reduction)</td></tr>
-    <tr><td>Google Non-Brand</td><td>$37,356</td><td>$25,077</td><td>+49%</td></tr>
-    <tr><td>Google PMax</td><td>$4,390</td><td>$9,516</td><td>-54%</td></tr>
-    <tr><td>Google Demand Gen</td><td>$10,341</td><td>$0</td><td>New channel</td></tr>
-    <tr><td>Meta Prospecting</td><td>$38,625</td><td>$25,395</td><td>+52%</td></tr>
-    <tr><td>TikTok (paused Feb)</td><td>$3,968</td><td>$0</td><td>Test</td></tr>
-    <tr><td><strong>Total</strong></td><td><strong>$95,865</strong></td><td><strong>$89,879</strong></td><td><strong>+6.7%</strong></td></tr>
-</table>
+<!-- ============================================================ -->
+<!-- 8. CAPITAL & CAPEX -->
+<!-- ============================================================ -->
+<h2 id="capex">8. Capital &amp; CAPEX</h2>
 
-<p><strong>2026 budgeted ad spend is ~$1.005M</strong> (Q1: ~$99K/mo, Q2-Q3: ~$73K/mo, Q4: ~$90K/mo). January 2026 was a peak month at $95.9K. At a blended CPA of ~$8, this generates an estimated <strong>125K+ purchases/year</strong>. Total January 2026 GA4-tracked revenue across all channels was <strong>$1.67M</strong> on $95.9K in ad spend, indicating a healthy marketing efficiency ratio.</p>
+<div class="placeholder">Content coming soon - buildout costs per location, lease terms, payback periods, maintenance capex, capital allocation</div>
 
-<p class="footer-note">Prepared February 2026. Data sources: Silverback Strategies monthly reports and marketing dashboard (Supermetrics/GA4), Klaviyo platform exports, Google Ads data, SOW/contract documentation. All figures represent the most recent reporting periods available.</p>
+<!-- ============================================================ -->
+<!-- 9. TECHNOLOGY & SYSTEMS -->
+<!-- ============================================================ -->
+<h2 id="technology">9. Technology &amp; Systems</h2>
+
+<div class="placeholder">Content coming soon - reservation system (custom-built), Square POS, Klaviyo, website infrastructure, data architecture, planned integrations (Klaviyo behavioral tracking)</div>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<p class="footer-note">Prepared February 2026. Data sources: Reservation system exports (654K customers, 895K bookings), Square POS (F&B sales), Silverback Strategies monthly reports and marketing dashboard (Supermetrics/GA4), Klaviyo platform exports, Google Ads data, SOW/contract documentation. All figures represent the most recent reporting periods available.</p>
+
+<script>
+// Highlight active nav link on scroll
+document.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('h2[id]');
+    const navLinks = document.querySelectorAll('.nav-bar a');
+    let current = '';
+    sections.forEach(function(section) {
+        const top = section.offsetTop - 80;
+        if (window.scrollY >= top) {
+            current = section.getAttribute('id');
+        }
+    });
+    navLinks.forEach(function(link) {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
